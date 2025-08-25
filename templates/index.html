@@ -1,1 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chaos Chatroom</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js"></script>
+</head>
+<body>
+    <div class="chat-container">
+        <header>
+            <h1>🔥 Chaos Chatroom 🔥</h1>
+            <div class="user-count">👥 <span id="users-count">1</span> users online</div>
+        </header>
+        
+        <div class="chaos-alert" id="chaos-alert">
+            <div class="chaos-content" id="chaos-content"></div>
+        </div>
+        
+        <div class="chat-messages" id="chat-messages">
+            <div class="system-message">Welcome to Chaos Chatroom! Expect the unexpected...</div>
+        </div>
+        
+        <div class="chat-input">
+            <input type="text" id="message-input" placeholder="Type your message..." maxlength="200">
+            <button id="send-button">Send</button>
+        </div>
+    </div>
 
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
