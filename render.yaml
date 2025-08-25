@@ -3,5 +3,5 @@ services:
     name: chaos-chat
     env: python
     buildCommand: "pip install -r requirements.txt"
-    startCommand: "gunicorn -k eventlet -w 1 app:app"
+    startCommand: "python app.py"  # or one of the other commands above
     plan: free
